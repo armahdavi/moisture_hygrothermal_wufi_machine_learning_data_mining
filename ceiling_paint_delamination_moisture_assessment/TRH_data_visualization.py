@@ -141,7 +141,7 @@ plt.show()
 
 
 
-# 3A: PLOT RELATIVE HUMIDITY DATA
+# 3B: PLOT RELATIVE HUMIDITY DATA
 plt.figure(figsize=(8, 6))
 
 ## Boxes of Bulk RH
