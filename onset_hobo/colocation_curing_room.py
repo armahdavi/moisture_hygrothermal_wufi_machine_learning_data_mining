@@ -14,11 +14,11 @@ import matplotlib.pyplot as plt
 
 
 
-main_folder = r'C:\EXP\logger_data\curing_room'
+main_folder = r'C:\logger_data\curing_room'
 os.chdir(main_folder)
 csv_files = glob.glob('*.csv', recursive=True)
 # csv_files.remove('4013_test_F.csv')
-output_folder_main = r'C:\EXP\logger_data\processed\trh\\'
+output_folder_main = r'C:\logger_data\processed\trh\\'
 
 # Read all sensor data and append
 df_all = pd.DataFrame([])
@@ -61,7 +61,7 @@ plt.legend()
 plt.tight_layout()
 
 # Display the plot
-plt.savefig(r'C:\EXP\logger_data\processed\trh_sensor.jpg', dpi = 1200, bbox_inches = 'tight')
+plt.savefig(r'C:\logger_data\processed\trh_sensor.jpg', dpi = 1200, bbox_inches = 'tight')
 plt.show()
 
 
@@ -82,7 +82,7 @@ plt.legend()
 plt.tight_layout()
 
 # Display the plot
-plt.savefig(r'C:\EXP\logger_data\processed\rh_sensor.jpg', dpi = 1200, bbox_inches = 'tight')
+plt.savefig(r'C:\logger_data\processed\rh_sensor.jpg', dpi = 1200, bbox_inches = 'tight')
 plt.show()
 
 
