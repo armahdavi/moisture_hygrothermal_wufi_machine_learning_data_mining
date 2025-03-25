@@ -182,8 +182,8 @@ def plot_sensor_colocate_rh(df, out_folder, fig_name, format_ = 'jpg', sensor_ty
 #########################
 
 # Use case 1: First tc sensor colocation 
-in_folder = r'C:\EXP\logger_data\raw\tc'
-out_folder = r'C:\EXP\logger_data\processed\first_tc_colocation_250205'
+in_folder = r'C:\logger_data\raw\tc'
+out_folder = r'C:\logger_data\processed\first_tc_colocation_250205'
 start_time = pd.to_datetime('2025-02-04 18:00:00')
 end_time = pd.to_datetime('2025-02-05 16:00:00')
 
@@ -192,14 +192,14 @@ df = df[~(df['file'] == '4013_test_F')]
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'first_tc_colocation_250205'
 plot_sensor_colocate_t(df, out_folder, fig_name)
 
 
 # Use case 2: First trh sensor colocation (UX-100-001)
-in_folder = r'C:\EXP\logger_data\raw\trh_ux'
-out_folder = r'C:\EXP\logger_data\processed\first_trh_colocation_250205'
+in_folder = r'C:\logger_data\raw\trh_ux'
+out_folder = r'C:\logger_data\processed\first_trh_colocation_250205'
 start_time = pd.to_datetime('2025-02-04 18:30:00')
 end_time = pd.to_datetime('2025-02-05 10:00:00')
 
@@ -207,14 +207,14 @@ df = in_folder_hobo_combine(in_folder, out_folder, start_time, end_time, sensor_
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'first_trh_colocation_250205'
 plot_sensor_colocate_t(df, out_folder, fig_name, sensor_type = 'trh')
 
 
 # Use case 3: one u12 and two ux trh sensors
-in_folder = r'C:\EXP\logger_data\raw\trh_u12_ux'
-out_folder = r'C:\EXP\logger_data\processed\trh_colocation_ux_u12_250205'
+in_folder = r'C:\logger_data\raw\trh_u12_ux'
+out_folder = r'C:\logger_data\processed\trh_colocation_ux_u12_250205'
 start_time = pd.to_datetime('2025-02-05 11:30:00')
 end_time = pd.to_datetime('2025-02-05 15:45:00')
 
@@ -222,7 +222,7 @@ df = in_folder_hobo_combine(in_folder, out_folder, start_time, end_time, sensor_
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot (temp)
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'trh_ux_u12_colocation_t_250205'
 plot_sensor_colocate_t(df, out_folder, fig_name, sensor_type = 'trh')
 
@@ -232,8 +232,8 @@ plot_sensor_colocate_rh(df, out_folder, fig_name, sensor_type = 'trh')
 
 
 # Use case 4: Colocation at home
-in_folder = r'C:\EXP\logger_data\raw\home'
-out_folder = r'C:\EXP\logger_data\processed\home'
+in_folder = r'C:\logger_data\raw\home'
+out_folder = r'C:\logger_data\processed\home'
 start_time = pd.to_datetime('2025-02-05 21:30:00')
 end_time = pd.to_datetime('2025-02-06 08:30:00')
 
@@ -241,7 +241,7 @@ df = in_folder_hobo_combine(in_folder, out_folder, start_time, end_time, sensor_
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot (Temp)
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'home_colocation_t'
 plot_sensor_colocate_t(df, out_folder, fig_name, sensor_type = 'trh')
 
@@ -251,8 +251,8 @@ plot_sensor_colocate_rh(df, out_folder, fig_name, sensor_type = 'trh')
 
 
 # Use case 5: Curing room
-in_folder = r'C:\EXP\logger_data\raw\curing_room'
-out_folder = r'C:\EXP\logger_data\processed\curing_room'
+in_folder = r'C:\logger_data\raw\curing_room'
+out_folder = r'C:\logger_data\processed\curing_room'
 start_time = pd.to_datetime('2025-02-05 15:00:00')
 end_time = pd.to_datetime('2025-02-05 16:20:00')
 
@@ -260,12 +260,12 @@ df = in_folder_hobo_combine(in_folder, out_folder, start_time, end_time, sensor_
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot (temp)
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'curing_room_ux_t'
 plot_sensor_colocate_t(df, out_folder, fig_name, sensor_type = 'trh')
 
 ## Sketch colocation plot (RH)
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'curing_room_ux_rh'
 plot_sensor_colocate_rh(df, out_folder, fig_name, sensor_type = 'trh')
 
@@ -273,8 +273,8 @@ plot_sensor_colocate_rh(df, out_folder, fig_name, sensor_type = 'trh')
 
 # use case 6: U12 colocations
 ## Note: 2 ux are also there for 
-in_folder = r'C:\EXP\logger_data\raw\trh_u12'
-out_folder = r'C:\EXP\logger_data\processed\second_trh_colocation_u12'
+in_folder = r'C:\logger_data\raw\trh_u12'
+out_folder = r'C:\logger_data\processed\second_trh_colocation_u12'
 start_time = pd.to_datetime('2025-02-06 13:15:00')
 end_time = pd.to_datetime('2025-02-06 16:45:00')
 
@@ -282,19 +282,19 @@ df = in_folder_hobo_combine(in_folder, out_folder, start_time, end_time, sensor_
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot (temp)
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'trh_u12_colocation_t'
 plot_sensor_colocate_t(df, out_folder, fig_name, sensor_type = 'trh')
 
 ## Sketch colocation plot (temp)
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'trh_u12_colocation_rh'
 plot_sensor_colocate_rh(df, out_folder, fig_name, sensor_type = 'trh')
 
 
 # use case 7: New TC wire sensors
-in_folder = r'C:\EXP\logger_data\raw\new_tc_wire'
-out_folder = r'C:\EXP\logger_data\processed\new_tc_colocation_250210'
+in_folder = r'C:\logger_data\raw\new_tc_wire'
+out_folder = r'C:\logger_data\processed\new_tc_colocation_250210'
 start_time = pd.to_datetime('2025-02-10 12:00:00')
 end_time = pd.to_datetime('2025-02-10 16:00:00')
 
@@ -303,6 +303,6 @@ df = in_folder_hobo_combine(in_folder, out_folder, start_time, end_time)
 df['Sensor'] = df['file'].str.split('_').str[0]
 
 ## Sketch colocation plot
-out_folder = r'C:\EXP\logger_data\processed'
+out_folder = r'C:\logger_data\processed'
 fig_name = 'new_tc_colocation_250210'
 plot_sensor_colocate_t(df, out_folder, fig_name)
